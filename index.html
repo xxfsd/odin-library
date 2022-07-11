@@ -13,7 +13,44 @@
         <h1>Library</h1>
     </header>
 
-    <button>Add Book</button>
+    <button class="add-book">Add Book</button>
+
+    <div class="popup-wrapper">
+        
+        <div class="popup">
+
+            <div class="popup-header">
+                <h2>Add Book</h2>
+                <button>X</button>
+            </div>
+
+            <div class="popup-content">
+                <label for=""></label>
+                <input type="text">
+
+                <label for=""></label>
+                <input type="text">
+
+                <label for=""></label>
+                <input type="text">
+                
+                <div class="radio-wrapper">
+                    <input type="radio" id="read-yes" name="read-yes">
+                    <label for="read-yes">Yes</label>
+
+                    <input type="radio" id="read-no" name="read-no">
+                    <label for="read-no">No</label>
+                </div>
+            </div>
+
+            <div class="popup-buttons">
+                <button>Save Book</button>
+                <button>Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
 
     </main>
     <footer>Created by Joshua Hughes</footer>

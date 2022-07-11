@@ -1,3 +1,7 @@
+const addBook = document.querySelector(".add-book");
+
+
+//array to store books
 const myLibrary = [
     {
         title: "American Psycho",
@@ -16,6 +20,7 @@ const myLibrary = [
     }
 ];
 
+//object constructor to add books
 class Book {
     constructor(title, author, pages){
         this.title = title;
@@ -23,3 +28,4 @@ class Book {
         this.pages = pages;
     }
 }
+
