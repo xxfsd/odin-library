@@ -13,28 +13,37 @@
         <h1>Library</h1>
     </header>
 
-    <button class="add-book">Add Book</button>
+    <div id="content-wrapper">
 
-    <div class="popup-wrapper">
+        <div id="content">
+
+        </div>
+
+    </div>
+
+    <button id="add-book">Add Book</button>
+
+    <div id="popup-wrapper">
         
-        <div class="popup">
+        <div id="popup">
 
-            <div class="popup-header">
+            <div id="popup-header">
                 <h2>Add Book</h2>
-                <button>X</button>
+                <button id="popup-close">X</button>
             </div>
 
-            <div class="popup-content">
-                <label for=""></label>
-                <input type="text">
+            <div id="popup-content">
 
-                <label for=""></label>
-                <input type="text">
-
-                <label for=""></label>
-                <input type="text">
+                <label for="title">TITLE</label>
+                <input type="text" id="title" name="title" required>
+            
+                <label for="author">AUTHOR</label>
+                <input type="text" id="author" name="author" required>
+            
+                <label for="pages">PAGES</label>
+                <input type="text" id="pages" name="pages" required>
                 
-                <div class="radio-wrapper">
+                <div id="radio-wrapper">
                     <input type="radio" id="read-yes" name="read-yes">
                     <label for="read-yes">Yes</label>
 
@@ -43,15 +52,14 @@
                 </div>
             </div>
 
-            <div class="popup-buttons">
-                <button>Save Book</button>
-                <button>Cancel</button>
+            <div id="popup-buttons">
+                <button id="save-book">Save Book</button>
+                <button id="cancel">Cancel</button>
             </div>
 
         </div>
 
     </div>
-
     </main>
     <footer>Created by Joshua Hughes</footer>
     <script src="script.js"></script>

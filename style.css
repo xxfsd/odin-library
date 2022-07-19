@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+#popup-wrapper {
+    display: none;
+}
+
+footer {
+    background-color: lightblue;
+}
