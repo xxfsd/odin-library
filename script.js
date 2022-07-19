@@ -15,39 +15,39 @@ const myLibrary = [];
 
 //object constructor to add books
 class Book {
-    constructor(title, author, pages) {
+    constructor(title, author, pages, read) {
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.read = read;
     }
 }
 
 //save button creates book object in myLibrary from values in popup forms input fields
 saveBook.addEventListener("click", () => {
-    myLibrary.push(new Book(title.value, author.value, pages.value));
+    var newBook = new Book(title.value, author.value, pages.value)
+    myLibrary.push(newBook);
     popup.style.display = "none";
-    content = "";
-    createBookObject();
+    //content = "";
+    createBookObject(newBook);
 });
 
-function createBookObject () {
-    for (let i = 0; i < myLibrary.length; i++) {
+function createBookObject (book) {
 
         const bookTitleDiv = document.createElement("div");
             bookTitleDiv.className = "book-title";
-            bookTitleDiv.textContent = myLibrary[i].title;
+            bookTitleDiv.textContent = book.title;
             content.appendChild(bookTitleDiv);
 
         const bookAuthorDiv = document.createElement("div");
             bookAuthorDiv.className = "book-author";
-            bookAuthorDiv.textContent = myLibrary[i].author;
+            bookAuthorDiv.textContent = book.author;
             content.appendChild(bookAuthorDiv);
 
         const bookPagesDiv = document.createElement("div");
             bookPagesDiv.className = "book-pages";
-            bookPagesDiv.textContent = myLibrary[i].pages;
+            bookPagesDiv.textContent = book.pages;
             content.appendChild(bookPagesDiv);
-    }
 }
 
 addBook.addEventListener("click", () => {
