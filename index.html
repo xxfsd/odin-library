@@ -13,14 +13,6 @@
         <h1>Library</h1>
     </header>
 
-    <div id="content-wrapper">
-
-        <div id="content">
-
-        </div>
-
-    </div>
-
     <button id="add-book">Add Book</button>
 
     <div id="popup-wrapper">
@@ -34,6 +26,8 @@
 
             <div id="popup-content">
 
+                <form id="add-book-form" action="#" onsubmit="return false">
+
                 <label for="title">TITLE</label>
                 <input type="text" id="title" name="title" required>
             
@@ -41,7 +35,7 @@
                 <input type="text" id="author" name="author" required>
             
                 <label for="pages">PAGES</label>
-                <input type="text" id="pages" name="pages" required>
+                <input type="number" id="pages" name="pages" required>
                 
                 <div id="radio-wrapper">
                     <input type="radio" id="read-yes" name="read-yes">
@@ -50,16 +44,25 @@
                     <input type="radio" id="read-no" name="read-no">
                     <label for="read-no">No</label>
                 </div>
-            </div>
 
-            <div id="popup-buttons">
-                <button id="save-book">Save Book</button>
-                <button id="cancel">Cancel</button>
-            </div>
-
+                <div id="popup-buttons">
+                    <button type="submit" form="add-book-form" id="save-book">Save Book</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+                
+                </form>
+        </div>
         </div>
 
+        </div>
     </div>
+
+    <div id="content-wrapper">
+
+        <div id="content"></div>
+
+    </div>
+
     </main>
     <footer>Created by Joshua Hughes</footer>
     <script src="script.js"></script>
